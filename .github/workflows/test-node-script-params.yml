@@ -19,3 +19,5 @@ jobs:
       - run: pwd
       - run: ls -la
       - run: node ./src/script.js
+        env:
+          LABEL: ${{ inputs.label }}
