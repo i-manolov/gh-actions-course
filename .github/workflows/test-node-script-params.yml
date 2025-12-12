@@ -1,0 +1,19 @@
+name: Test Node Params
+on:
+  workflow_dispatch:
+    inputs:
+      label:
+        type: string
+        required: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - run: node -e "console.log(`Label is: ${ process.env.INPUTS_LABEL }`)"
