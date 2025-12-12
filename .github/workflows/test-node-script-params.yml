@@ -14,6 +14,6 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: "24"
 
-      - run: node -e "console.log(`Label is: ${ process.env.INPUTS_LABEL }`)"
+      - run: node ../../src/script.js
