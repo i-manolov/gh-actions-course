@@ -16,4 +16,6 @@ jobs:
         with:
           node-version: "24"
 
-      - run: node ../../src/script.js
+      - run: pwd
+      - run: ls -la
+      - run: node ./src/script.js
