@@ -1,1 +1,1 @@
-console.log(`Label is: ${process.env.INPUT_LABEL}`);
+console.log(`Label is: ${JSON.stringify(process.env, null, 2)}`);
